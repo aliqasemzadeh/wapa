@@ -29,7 +29,7 @@
 
 <div
     class="grid grid-cols-12 gap-6 h-[calc(100vh-8rem)]"
-    wire:poll.{{ $pollInterval ?? '5s' }}
+    wire:poll.5s
     x-data="{
         soundOn: localStorage.getItem('whatsapp-sound') !== '0',
         lastInboundId: @js($messages->where('direction', 'inbound')->max('id') ?: 0),
@@ -400,7 +400,7 @@
     </flux:card>
 
     {{-- Delete confirmation modal — opens when confirmDelete() sets $showDeleteConfirm --}}
-    <flux:modal wire:model="showDeleteConfirm" @close="cancelDelete" class="max-w-md">
+    <flux:modal wire:model="showDeleteConfirm" wire:close="cancelDelete" class="max-w-md">
         <div class="space-y-4">
             <div class="flex items-start gap-3">
                 <div class="w-10 h-10 rounded-full bg-rose-100 dark:bg-rose-950/40 flex items-center justify-center flex-shrink-0">

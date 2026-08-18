@@ -65,7 +65,7 @@
     {{-- QR modal — opens only when user clicks "Show QR". Status auto-updates
          from the wrapping wire:poll so the user sees qr → authenticated → ready
          transitions live without having to refresh. --}}
-    <flux:modal wire:model="showQr" @close="closeQr" class="max-w-md">
+    <flux:modal wire:model="showQr" wire:close="closeQr" class="max-w-md">
         @if ($qrFor)
             <div class="space-y-5">
                 <div>
