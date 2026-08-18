@@ -13,8 +13,10 @@ class AutoReplyOnKeyword
     private const KEYWORDS = ['2', '۲', '٢'];
 
     private const REPLY = <<<'TEXT'
-سلام من علی قاسم زاده هستم صبر کنید
-وب سایت فروش 1860
+سلام
+این بات حامد و امیر علی هست
+وب سایت فروش قطعات کامپیوتری
+1860.AI
 TEXT;
 
     public function handleWeb(WebMessageReceived $event): void
